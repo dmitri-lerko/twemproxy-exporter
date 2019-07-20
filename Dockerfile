@@ -8,6 +8,6 @@ COPY            twemproxy-exporter /twemproxy-exporter
 WORKDIR		/
 ENV		GIN_MODE=release
 
-EXPOSE          8080
+EXPOSE          9119
 
 ENTRYPOINT      [ "/twemproxy-exporter" ]

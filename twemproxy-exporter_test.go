@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"net/http/httptest"
 	"testing"
-	"twemproxy-exporter/handlers/healthcheck"
+	"./handlers/healthcheck"
 )
 
 func TestHealthCheck(t *testing.T) {

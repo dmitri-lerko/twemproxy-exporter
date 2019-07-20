@@ -1,10 +1,8 @@
 #################################################
-GOOS	:= $(shell go env GOOS)
-GOARCH	:= $(shell go env GOARCH)
 GOFILES	:= $(shell ls *.go |grep -v test)
+GOOS := linux
+GOARCH := amd64
 GOBUILD	:= GOOS=$(GOOS) GOARCH=$(GOARCH) go build
-
-
 #################################################
 default:	deps test build
 docker:		deps test linuxbuild docker

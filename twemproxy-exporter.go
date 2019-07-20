@@ -5,8 +5,8 @@ import (
 	"github.com/shokunin/contrib/ginrus"
 	"github.com/sirupsen/logrus"
 	"time"
-	"twemproxy-exporter/handlers/healthcheck"
-	"twemproxy-exporter/handlers/metrics"
+	"./handlers/healthcheck"
+	"./handlers/metrics"
 )
 
 func main() {
@@ -20,5 +20,5 @@ func main() {
 	router.GET("/metrics", metrics.Metrics)
 
 	// RUN rabit run
-	router.Run("0.0.0.0:9119") // listen and serve on 0.0.0.0:8080
+	router.Run("0.0.0.0:9119")
 }
